@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base, sessionmaker
+from sqlalchemy.orm import declarative_base, sessionmaker
 from dotenv import load_dotenv
 import os
 
@@ -12,8 +12,7 @@ engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 
 Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-class Base(DeclarativeBase):
-    pass
+Base = declarative_base()
 
 #Função de conexão 
 def get_db():
