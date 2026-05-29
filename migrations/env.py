@@ -5,15 +5,15 @@ from sqlalchemy import pool
 
 from alembic import context
 
-# ----------------------------- edite aqui
-
+# -------------------EDITE AQUI-------------------
 from dotenv import load_dotenv
 import os
 from app.database import Base
-from app.models.usuario import Usuario
+from app.models import usuarios
+
 
 load_dotenv()
-# ----------------------------- edite aqui
+# -------------------EDITE AQUI-------------------
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
